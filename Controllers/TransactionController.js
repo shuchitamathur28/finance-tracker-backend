@@ -13,7 +13,9 @@ module.exports.AddTransaction = async (req, res, next) => {
       .json({ message: "Transaction added successfully", success: true });
     next();
   } catch (error) {
-    console.error(error);
+    res
+      .status(400)
+      .json({ message: "Transaction could not be saved", success: false });
   }
 };
 
