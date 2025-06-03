@@ -21,7 +21,11 @@ app.use(cookieParser());
 app.use(transactionRoute);
 app.use("/", authRoute);
 const dbo = require("./db/conn");
- 
+
+app.get('/', (req, res) => {
+  res.json({ message: 'Finance Tracker Backend Is Working.' });
+});
+
 app.listen(port, () => {
   dbo.connectToServer(function (err) {
     if (err) console.error(err);
