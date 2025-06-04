@@ -23,5 +23,5 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-Make sure to replace "http://your-frontend-url.com" with the URL where your frontend is hosted.
 ```
+Make sure to replace "http://your-frontend-url.com" with the URL where your frontend is hosted.
